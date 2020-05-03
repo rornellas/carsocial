@@ -1,20 +1,18 @@
 package br.com.fiap.carsocial.service.api.controller.request
 
 import br.com.fiap.carsocial.service.api.document.User
+import br.com.fiap.carsocial.service.api.model.Car
 import javax.validation.constraints.Email
 import javax.validation.constraints.NotBlank
 
-data class UserRequest(
+data class CarRequest(
     @field:NotBlank
-    var name: String?=null,
+    var model: String?=null,
     @field:NotBlank
-    @field:Email
-    var email: String?=null,
-    @field:NotBlank
-    var password: String?=null
+    var plate: String?=null
 
 ) {
-    fun convertToUser(): User {
-        return User(null, name = name, email = email, password = password)
+    fun convertToCar(): Car {
+        return Car(model = model, plate = plate)
     }
 }

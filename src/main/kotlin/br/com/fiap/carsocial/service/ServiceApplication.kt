@@ -3,8 +3,11 @@ package br.com.fiap.carsocial.service
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
+
 @SpringBootApplication
-class ServiceApplication
+class ServiceApplication {
+
+}
 
 fun main(args: Array<String>) {
 	runApplication<ServiceApplication>(*args)

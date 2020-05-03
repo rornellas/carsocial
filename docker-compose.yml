@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+  service_mongo:
+    container_name: service-mongo
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_PASSWORD: MfQq>E!5b&nBQ5:^
+    ports:
+      - "27017:27017"
+    volumes:
+      - /mongo_data_service:/data/db
+
+  car-service-app:
+    container_name: car-service-app
+    image: car-service-app
+    build:
+      context: ./
+    environment:
+      - SERVER_PORT=8080
+    ports:
+      - "8080:8080"
+    depends_on:
+      - service_mongo
