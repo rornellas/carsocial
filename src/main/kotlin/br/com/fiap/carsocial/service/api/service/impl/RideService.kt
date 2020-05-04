@@ -27,7 +27,7 @@ class RideService(val rideRepository: IRideRepository): IRideService {
         return rideRepository.save(userRequest.convertToRide()).map { r -> RideResponse(r) }
     }
 
-    override fun search(name: String?, email: String?, carModel: String): Flux<RideResponse> {
+    override fun search(name: String?, email: String?, carModel: String?): Flux<RideResponse> {
         val ride = Ride(name = name, email = email, car = Car(model = carModel))
         return rideRepository.findAll(Example.of(ride)).map { r -> RideResponse(r) }
     }

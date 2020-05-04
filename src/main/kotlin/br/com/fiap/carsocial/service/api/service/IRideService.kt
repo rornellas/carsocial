@@ -10,7 +10,7 @@ interface IRideService {
 
     fun create(userRequest: RideRequest): Mono<RideResponse>
     fun findById(id: String): Mono<RideResponse>
-    fun search(name: String?, email: String?, carModel: String): Flux<RideResponse>
+    fun search(name: String?, email: String?, carModel: String?): Flux<RideResponse>
     fun updateCoords(id: String, coords: CoordsRequest)
     fun near(latitude: String, longitude: String, distance: Double): Flux<RideResponse>
 }
