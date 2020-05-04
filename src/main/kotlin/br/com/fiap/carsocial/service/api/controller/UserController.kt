@@ -18,7 +18,7 @@ import javax.validation.Valid
 @RequestMapping("/users")
 class UserController(val userService: IUserService) {
 
-    @RequestMapping("/greeting")
+    @RequestMapping(UserRouter.GREETING)
     @ApiOperation(value = "Greetin API", hidden = true)
     fun greeting(): HttpEntity<Greeting> {
         val greeting = Greeting("Hello User!")

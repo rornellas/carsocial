@@ -22,7 +22,7 @@ import javax.validation.Valid
 @RequestMapping("/rides")
 class RideController(val rideService: IRideService) {
 
-    @RequestMapping("/greeting")
+    @RequestMapping(RideRouter.GREETING)
     @ApiOperation(value = "Greetin API", hidden = true)
     fun greeting(): HttpEntity<Greeting> {
         val greeting = Greeting("Hello User!")
