@@ -1,6 +1,5 @@
 package br.com.fiap.carsocial.service.api.document
 
-import br.com.fiap.carsocial.service.api.controller.request.UserRequest
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 

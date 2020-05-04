@@ -7,7 +7,6 @@ import org.springframework.web.reactive.config.WebFluxConfigurer
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import springfox.documentation.builders.ApiInfoBuilder
-import springfox.documentation.builders.PathSelectors
 import springfox.documentation.builders.RequestHandlerSelectors
 import springfox.documentation.service.ApiInfo
 import springfox.documentation.spi.DocumentationType

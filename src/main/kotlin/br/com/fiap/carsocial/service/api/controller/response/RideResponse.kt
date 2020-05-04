@@ -2,7 +2,6 @@ package br.com.fiap.carsocial.service.api.controller.response
 
 import br.com.fiap.carsocial.service.api.document.Ride
 import br.com.fiap.carsocial.service.api.model.Car
-import br.com.fiap.carsocial.service.api.model.Coords
 
 data class RideResponse(
         var id: String? = null,

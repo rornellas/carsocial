@@ -7,6 +7,8 @@ import br.com.fiap.carsocial.service.api.controller.router.RideRouter
 import br.com.fiap.carsocial.service.api.model.Greeting
 import br.com.fiap.carsocial.service.api.service.IRideService
 import io.swagger.annotations.ApiOperation
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn
 import org.springframework.http.HttpEntity
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -14,8 +16,6 @@ import org.springframework.web.bind.annotation.*
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import javax.validation.Valid
-
-import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*
 
 
 @RestController

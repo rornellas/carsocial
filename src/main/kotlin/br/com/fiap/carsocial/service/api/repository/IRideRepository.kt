@@ -2,7 +2,6 @@ package br.com.fiap.carsocial.service.api.repository
 
 import br.com.fiap.carsocial.service.api.document.Ride
 import org.springframework.data.domain.Example
-import org.springframework.data.geo.Distance
 import org.springframework.data.mongodb.repository.Query
 import org.springframework.data.repository.reactive.ReactiveCrudRepository
 import org.springframework.stereotype.Repository

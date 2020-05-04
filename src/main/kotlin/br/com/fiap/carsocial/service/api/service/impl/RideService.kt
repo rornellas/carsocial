@@ -5,12 +5,10 @@ import br.com.fiap.carsocial.service.api.controller.request.RideRequest
 import br.com.fiap.carsocial.service.api.controller.response.RideResponse
 import br.com.fiap.carsocial.service.api.document.Ride
 import br.com.fiap.carsocial.service.api.model.Car
-import br.com.fiap.carsocial.service.api.model.Coords
 import br.com.fiap.carsocial.service.api.repository.IRideRepository
 import br.com.fiap.carsocial.service.api.service.IRideService
 import org.springframework.data.domain.Example
 import org.springframework.data.geo.Distance
-import org.springframework.data.geo.Metric
 import org.springframework.data.geo.Metrics
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Flux
