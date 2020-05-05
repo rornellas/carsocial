@@ -6,7 +6,7 @@ services:
     image: mongo
     restart: always
     environment:
-      MONGO_INITDBwe_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_USERNAME: mongo
       MONGO_INITDB_ROOT_PASSWORD: MfQq>E!5b&nBQ5:^
     ports:
       - "27017:27017"
