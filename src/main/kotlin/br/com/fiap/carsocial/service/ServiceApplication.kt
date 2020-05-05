@@ -5,9 +5,7 @@ import org.springframework.boot.runApplication
 
 
 @SpringBootApplication
-class ServiceApplication {
-
-}
+class ServiceApplication
 
 fun main(args: Array<String>) {
 	runApplication<ServiceApplication>(*args)
