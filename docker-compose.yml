@@ -10,8 +10,6 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: MfQq>E!5b&nBQ5:^
     ports:
       - "27017:27017"
-    volumes:
-      - ~/service_mongo_data:/data/db
 
   car-service-app:
     container_name: car-service-app

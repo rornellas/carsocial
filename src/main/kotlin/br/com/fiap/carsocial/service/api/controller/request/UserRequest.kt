@@ -11,6 +11,8 @@ data class UserRequest(
     @field:Email
     var email: String?=null,
     @field:NotBlank
+    var telephone: String?=null,
+    @field:NotBlank
     var password: String?=null
 
 ) {
