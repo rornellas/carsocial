@@ -17,6 +17,6 @@ data class UserRequest(
 
 ) {
     fun convertToUser(): User {
-        return User(null, name = name, email = email, password = password)
+        return User(null, name = name, email = email, telephone = telephone, password = password)
     }
 }
