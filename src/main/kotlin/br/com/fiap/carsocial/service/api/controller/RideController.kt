@@ -53,7 +53,7 @@ class RideController(val rideService: IRideService) {
     }
 
     @GetMapping(RideRouter.NEAR)
-    fun near(@RequestParam(required = true) latitude: String, @RequestParam(required = true) longitude: String, @RequestParam(required = true, defaultValue = "5") distance: Double) : Flux<RideResponse> {
+    fun near(@RequestParam(required = true) latitude: String, @RequestParam(required = true) longitude: String, @RequestParam(required = true, defaultValue = "5000") distance: Double) : Flux<RideResponse> {
         return rideService.near(latitude, longitude, distance)
     }
 
