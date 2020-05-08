@@ -22,3 +22,14 @@ services:
       - "8080:8080"
     depends_on:
       - service_mongo
+  car-service-nginx:
+    container_name: car-service-nginx
+    image: nginx:1.13
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - car-service-app
