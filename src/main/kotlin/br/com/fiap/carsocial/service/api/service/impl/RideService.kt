@@ -13,6 +13,7 @@ import org.springframework.data.geo.Metrics
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
+import reactor.core.scheduler.Schedulers
 
 @Service
 class RideService(val rideRepository: IRideRepository): IRideService {
@@ -31,9 +32,10 @@ class RideService(val rideRepository: IRideRepository): IRideService {
     }
 
     override fun updateCoords(id: String, coords: CoordsRequest) {
-        rideRepository.findById(id).doOnSuccess {
+        var ride: Ride = Ride();
+        rideRepository.findById(id).subscribe{
             it.coords = coords.convertToCoords()
-            rideRepository.save(it)
+            rideRepository.save(it).subscribe()
         }
     }
 
