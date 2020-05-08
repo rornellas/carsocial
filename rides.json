@@ -1,0 +1,74 @@
+[
+	{
+	  "name": "Eduardo Ferreira",
+	  "email": "eduardo@carsocial.com.br",
+	  "car": {
+		"model": "Gol 1.6",
+		"plate": "OHL2010"
+	  },
+	  "coords": {
+		"latitude": "-23.550055011589965",
+		"longitude": "-46.58256232738495"
+	  }
+	},
+	{
+	  "name": "Rodrigo Ornellas",
+	  "email": "rodrigo@carsocial.com.br",
+	  "car": {
+		"model": "Uno 1.0",
+		"plate": "FBC3422"
+	  },
+	  "coords": {
+		"latitude": "-23.542083917796194",
+		"longitude": "-46.58601097762585"
+	  }
+	},	
+	{
+	  "name": "Wagner Carvalho",
+	  "email": "wagner@carsocial.com.br",
+	  "car": {
+		"model": "Golf 2.0",
+		"plate": "GFE0022"
+	  },
+	  "coords": {
+		"latitude": "-23.554676881238755",
+		"longitude": "-46.58105693757534"
+	  }
+	},	
+	{
+	  "name": "Lucas Duarte",
+	  "email": "lucas@carsocial.com.br",
+	  "car": {
+		"model": "Satana 2.0",
+		"plate": "REJ2072"
+	  },
+	  "coords": {
+		"latitude": "-23.54350395985448",
+		"longitude": "-46.577389016747475"
+	  }
+	},	
+	{
+	  "name": "João Externo",
+	  "email": "joaoexterno@carsocial.com.br",
+	  "car": {
+		"model": "KA 2.0",
+		"plate": "GGE0342"
+	  },
+	  "coords": {
+		"latitude": "-23.554676881238755",
+		"longitude": "-46.586420349776745"
+	  }
+	},	
+	{
+	  "name": "José Externo",
+	  "email": "joseexterno@carsocial.com.br",
+	  "car": {
+		"model": "Fiesta 2.0",
+		"plate": "IFM1234"
+	  },
+	  "coords": {
+		"latitude": "-23.54670606768003",
+		"longitude": "-46.58456426113844"
+	  }
+	},	
+]

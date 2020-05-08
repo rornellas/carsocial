@@ -38,8 +38,6 @@ class RideService(val rideRepository: IRideRepository): IRideService {
     }
 
     override fun near(latitude: String, longitude: String, distance: Double): Flux<RideResponse> {
-        val convertedDistance = Distance(distance, Metrics.KILOMETERS)
-
-        return rideRepository.near(latitude.toDouble(), longitude.toDouble(), convertedDistance.normalizedValue).map { r -> RideResponse(r) }
+        return rideRepository.near(latitude.toDouble(), longitude.toDouble(), distance).map { r -> RideResponse(r) }
     }
 }
