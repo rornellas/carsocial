@@ -32,7 +32,6 @@ class RideService(val rideRepository: IRideRepository): IRideService {
     }
 
     override fun updateCoords(id: String, coords: CoordsRequest) {
-        var ride: Ride = Ride();
         rideRepository.findById(id).subscribe{
             it.coords = coords.convertToCoords()
             rideRepository.save(it).subscribe()

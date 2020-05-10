@@ -7,6 +7,7 @@ import br.com.fiap.carsocial.service.api.document.Ride
 import br.com.fiap.carsocial.service.api.document.Travel
 import br.com.fiap.carsocial.service.api.repository.ITravelRepository
 import br.com.fiap.carsocial.service.api.service.ITravelService
+import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
 import java.time.LocalDateTime
