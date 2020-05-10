@@ -1,4 +1,5 @@
 # Car-Social Webservice API
+Kotlin + Spring Boot + Spring HATEOAS + Reactive MongoDB
 
 - Para executar o aplicativo, é necessário ter o docker instalado.
 
