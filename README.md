@@ -1,6 +1,10 @@
 # Car-Social Webservice API
 Kotlin + Spring Boot + Spring HATEOAS + Reactive MongoDB
 
+## AWS
+- A api está acessível com documentação e navegação na aws sob o seguinte endereço: http://54.86.106.171/swagger-ui.html
+
+## Requisitos
 - Para executar o aplicativo, é necessário ter o docker instalado.
 
 ## Executar aplicação
