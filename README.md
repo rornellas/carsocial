@@ -17,12 +17,12 @@ Acesse a documentação e utilize a API no seguinte endereço: "http://localhost
 
 Para acessar as informações para navegação HATEOAS, acessar as seguintes url's: 
 
-http://localhost:8080/rides/v1/greeting
-http://localhost:8080/users/v1/greeting
-http://localhost:8080/travels/v1/greeting
+- http://localhost:8080/rides/v1/greeting
+- http://localhost:8080/users/v1/greeting
+- http://localhost:8080/travels/v1/greeting
 
 ou 
 
-http://192.168.99.100:8080/rides/v1/greeting
-http://192.168.99.100:8080/users/v1/greeting
-http://192.168.99.100:8080/travels/v1/greeting
+- http://192.168.99.100:8080/rides/v1/greeting
+- http://192.168.99.100:8080/users/v1/greeting
+- http://192.168.99.100:8080/travels/v1/greeting
