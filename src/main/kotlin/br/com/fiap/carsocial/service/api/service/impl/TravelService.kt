@@ -1,13 +1,11 @@
 package br.com.fiap.carsocial.service.api.service.impl
 
-import br.com.fiap.carsocial.service.api.controller.request.CoordsRequest
+import br.com.fiap.carsocial.service.api.controller.exception.NotFoundException
 import br.com.fiap.carsocial.service.api.controller.request.TravelRequest
 import br.com.fiap.carsocial.service.api.controller.response.TravelResponse
-import br.com.fiap.carsocial.service.api.document.Ride
 import br.com.fiap.carsocial.service.api.document.Travel
 import br.com.fiap.carsocial.service.api.repository.ITravelRepository
 import br.com.fiap.carsocial.service.api.service.ITravelService
-import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
 import java.time.LocalDateTime
@@ -16,7 +14,7 @@ import java.time.LocalDateTime
 class TravelService(val travelRepository: ITravelRepository, val userService: UserService, val rideService: RideService): ITravelService {
 
     override fun findById(id: String): Mono<TravelResponse> {
-        return travelRepository.findById(id).map { t -> TravelResponse(t) }
+        return travelRepository.findById(id).switchIfEmpty(Mono.error(NotFoundException("Travel not found!"))).map { t -> TravelResponse(t) }
     }
 
     override fun create(travelRequest: TravelRequest): Mono<TravelResponse> {
@@ -26,14 +24,14 @@ class TravelService(val travelRepository: ITravelRepository, val userService: Us
     }
 
     override fun start(id: String): Mono<TravelResponse> {
-        return travelRepository.findById(id).map{
+        return travelRepository.findById(id).switchIfEmpty(Mono.error(NotFoundException("Travel not found!"))).map{
             it.startedAt = LocalDateTime.now()
             travelRepository.save(it).subscribe()
             TravelResponse(it)
         }
     }
     override fun finish(id: String): Mono<TravelResponse> {
-        return travelRepository.findById(id).map {
+        return travelRepository.findById(id).switchIfEmpty(Mono.error(NotFoundException("Travel not found!"))).map {
             it.finishedAt = LocalDateTime.now()
             travelRepository.save(it).subscribe()
             TravelResponse(it)

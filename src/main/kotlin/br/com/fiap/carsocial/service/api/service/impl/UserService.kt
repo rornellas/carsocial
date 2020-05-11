@@ -1,5 +1,6 @@
 package br.com.fiap.carsocial.service.api.service.impl
 
+import br.com.fiap.carsocial.service.api.controller.exception.NotFoundException
 import br.com.fiap.carsocial.service.api.controller.request.UserRequest
 import br.com.fiap.carsocial.service.api.controller.response.UserResponse
 import br.com.fiap.carsocial.service.api.repository.IUserRepository
@@ -11,7 +12,7 @@ import reactor.core.publisher.Mono
 class UserService(val userRepository: IUserRepository): IUserService {
 
     override fun findById(id: String): Mono<UserResponse> {
-        return userRepository.findById(id).map { u -> UserResponse(u) }
+        return userRepository.findById(id).switchIfEmpty(Mono.error(NotFoundException("User not found!"))).map { u -> UserResponse(u) }
     }
 
     override fun create(userRequest: UserRequest): Mono<UserResponse> {

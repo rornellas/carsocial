@@ -59,10 +59,8 @@ class RideController(val rideService: IRideService) {
 
     @PatchMapping(RideRouter.NEW_COORDS)
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    fun updateCoords(@PathVariable(required = true) id: String, @RequestBody(required = true) coords: CoordsRequest) : ResponseEntity<Void>  {
-        rideService.updateCoords(id, coords)
-
-        return ResponseEntity.noContent().build()
+    fun updateCoords(@PathVariable(required = true) id: String, @RequestBody(required = true) coords: CoordsRequest) : Mono<RideResponse> {
+        return rideService.updateCoords(id, coords)
     }
 
 }
