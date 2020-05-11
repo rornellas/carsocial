@@ -8,10 +8,10 @@ Kotlin + Spring Boot + Spring HATEOAS + Reactive MongoDB
 - Para executar o aplicativo, é necessário ter o docker instalado.
 
 ## Executar aplicação
-Para rodar o aplicativo execut, dentro do diretório principal do projeto execute execute o comando a seguir:  
+Para rodar o aplicativo, dentro do diretório principal do projeto, execute execute o comando a seguir:  
 
 - LINUX: start-project.sh
-- LINUX: start-project.bat
+- WINDOWS: start-project.bat
 
 ## Documentação e navegação
 
